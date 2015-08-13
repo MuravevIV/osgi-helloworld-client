@@ -28,6 +28,12 @@
             <version>5.0.1</version>
         </dependency>
 
+        <dependency>
+            <groupId>com.ilyamur.osgi</groupId>
+            <artifactId>osgi-helloworld</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
     </dependencies>
 
     <build>
@@ -41,13 +47,9 @@
                 <extensions>true</extensions>
                 <configuration>
                     <instructions>
-                        <Export-Package>com.ilyamur.osgi.helloworld.client.service</Export-Package>
                         <Private-Package>com.ilyamur.osgi.helloworld.client.impl</Private-Package>
                         <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
                         <Bundle-Activator>com.ilyamur.osgi.helloworld.client.impl.Activator</Bundle-Activator>
-                        <Export-Service>
-                            com.ilyamur.osgi.helloworld.client.service.OsgiHelloworldClientService
-                        </Export-Service>
                     </instructions>
                 </configuration>
             </plugin>
